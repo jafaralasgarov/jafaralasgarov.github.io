@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cəfər Ələsgərov — marketinq sistemi</title>
+<meta name="description" content="Marketinq analizi, Meta reklamı, SMM-ə və satışa rəhbərlik, Claude və n8n ilə avtomatlaşdırma. Bakı.">
+<meta property="og:title" content="Cəfər Ələsgərov — marketinq sistemi">
+<meta property="og:description" content="Reklamınız baxış yox, müraciət gətirsin. İşlərim və paketlər.">
+<meta property="og:image" content="https://jafaralasgarov.github.io/media/ief.jpg">
+<meta property="og:url" content="https://jafaralasgarov.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#F3F4F1; --ink:#1A1D1F; --muted:#5E676B; --line:#D5DAD6;
+  --accent:#A8233A; --tile:#202427; --on-accent:#fff;
+  --gut:clamp(16px,4vw,40px); --max:1120px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ground:#121416; --ink:#ECEEEA; --muted:#9AA3A6; --line:#2C3236; --accent:#E0566B; --tile:#1B1F22; --on-accent:#121416; color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;font-variation-settings:"wdth" 100}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;padding-block:20px}
+.who{font-weight:700;font-variation-settings:"wdth" 80;font-size:1.05rem;text-decoration:none}
+
+/* hero */
+.hero{padding-block:clamp(24px,6vw,64px) 28px}
+h1{font-variation-settings:"wdth" 66;font-weight:800;font-size:clamp(2.7rem,10.5vw,6.4rem);line-height:.92;letter-spacing:-.01em;margin:0;max-width:13ch}
+.lede{font-size:clamp(1.05rem,2.4vw,1.25rem);color:var(--muted);max-width:50ch;margin:22px 0 0}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:650;padding:13px 20px;border-radius:12px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--ground)}
+.btn svg{width:19px;height:19px;flex:none}
+
+/* reel strip — the one bold element */
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--gut) 18px;margin-top:clamp(28px,5vw,48px);scrollbar-width:thin;
+  max-width:calc(var(--max) + 2*var(--gut));margin-inline:auto}
+.reel{flex:0 0 clamp(200px,44vw,252px);scroll-snap-align:start;margin:0}
+.frame{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:18px;overflow:hidden;background:var(--tile)}
+.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.sound{position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;cursor:pointer;display:grid;place-items:center}
+.sound svg{width:18px;height:18px}
+.reel figcaption{padding:10px 2px 0}
+.reel b{display:block;font-variation-settings:"wdth" 80;font-size:1.02rem}
+.reel span{display:block;color:var(--muted);font-size:.9rem;line-height:1.4}
+.reel small{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;opacity:.85}
+
+/* sections */
+section{padding-block:clamp(40px,7vw,80px);border-top:1px solid var(--line)}
+h2{font-variation-settings:"wdth" 70;font-weight:800;font-size:clamp(1.9rem,5vw,3rem);line-height:1;margin:0 0 22px;max-width:20ch}
+.intro{font-size:clamp(1.1rem,2.6vw,1.45rem);line-height:1.45;max-width:38ch;margin:0}
+.total{font-variation-settings:"wdth" 70;font-weight:800;font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.1;max-width:24ch;margin:32px 0 18px}
+.ledger{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);max-width:860px}
+.ledger li{display:grid;grid-template-columns:minmax(120px,1.1fr) 1.4fr auto 1.3fr;gap:6px 18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.ledger li>a:first-child{font-weight:700;text-decoration:none}
+.ledger li>span{color:var(--muted);font-size:.92rem}
+.ledger b{font-variation-settings:"wdth" 70;font-weight:800;font-size:1.35rem;color:var(--accent)}
+.ledger .top{color:var(--muted);font-size:.92rem;text-underline-offset:3px}
+@media (max-width:640px){.ledger li{grid-template-columns:1fr auto}.ledger li>span{grid-column:1}.ledger .top{grid-column:1/-1}}
+.src{color:var(--muted);font-size:.85rem;margin-top:10px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:28px 32px}
+.cols h3{font-variation-settings:"wdth" 80;font-size:1.2rem;margin:0 0 6px}
+.cols p{margin:0;color:var(--muted)}
+
+ol.days{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border-left:1px solid var(--line)}
+ol.days li{padding:4px 18px 18px;border-right:1px solid var(--line)}
+ol.days .d{display:block;font-variation-settings:"wdth" 66;font-weight:800;font-size:2.1rem;line-height:1;color:var(--accent)}
+ol.days p{margin:8px 0 0;font-size:.95rem}
+.after{margin:22px 0 0;color:var(--muted);max-width:60ch}
+
+.pk{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.pk article{border:1.5px solid var(--line);border-radius:16px;padding:22px}
+.pk article.mid{border-color:var(--ink)}
+.pk h3{font-variation-settings:"wdth" 70;font-weight:800;font-size:1.7rem;margin:0}
+.pk .for{color:var(--muted);font-size:.92rem;margin:4px 0 14px}
+.pk ul{margin:0;padding-left:1.1em}
+.pk li{margin:4px 0}
+.note{margin-top:18px;color:var(--muted);max-width:62ch}
+.promise{margin-top:14px;padding:14px 16px;border-left:3px solid var(--accent);max-width:62ch}
+
+.fit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.fit h3{font-size:1.1rem;margin:0 0 8px}
+.fit ul{margin:0;padding-left:1.1em}
+.fit li{margin:5px 0}
+
+.contact h2{max-width:16ch}
+.contact .ctas{margin-top:8px}
+.foot{padding-block:28px 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+/* draft review marks (removed on publish) */
+html[data-draft] [data-confirm]{outline:2px dashed var(--accent);outline-offset:2px;border-radius:3px}
+.draftbar{display:none}
+html[data-draft] .draftbar{display:block;background:var(--accent);color:var(--on-accent);font-size:.85rem;padding:8px var(--gut);text-align:center}
+
+@media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto!important} }
+</style>
+</head>
+<body>
+<div class="draftbar" data-t="draft">Qaralama: qırmızı qırıq xətt içindəkiləri təsdiqlə və ya düzəlt.</div>
+
+<header class="wrap top">
+  <a class="who" href="#" data-t="name">Cəfər Ələsgərov</a>
+</header>
+
+<main>
+<div class="wrap hero">
+  <h1 data-t="h1">Reklamınız baxış yox, müraciət gətirsin.</h1>
+  <p class="lede" data-t="lede">Marketinqinizi analiz edirəm, reklamı qururam, SMM-inizə nə çəkəcəyini öyrədirəm və satış mesajlarınızı düzəldirəm. Təkrarlanan işləri Claude və n8n ilə avtomatlaşdırıram ki, komandanız özü davam etsin.</p>
+  <div class="ctas">
+    <a class="btn primary js-wa" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span data-t="cta_wa">WhatsApp-a yazın</span></a>
+    <a class="btn" href="mailto:jafar.alasgarov@gmail.com"><span data-t="cta_mail">Mail göndərin</span></a>
+  </div>
+</div>
+
+<div class="strip" aria-label="İşlər">
+  <figure class="reel">
+    <div class="frame"><video src="media/ief.mp4" poster="media/ief.jpg" muted loop playsinline preload="none"></video><button class="sound" type="button" aria-label="Səsi aç"></button></div>
+    <figcaption><b>İEF · İstanbul Elektrostatik Filtre</b><span data-t="c_ief">Daimi müştəri, uzaqdan işləyirik. Bakı yarış həftəsi üçün çəkilişsiz reklam videosu: loqolu maşın, pilot, şəhər.</span><small data-t="t_ief">AI video · B2B · daimi müştəri</small></figcaption>
+  </figure>
+  <figure class="reel">
+    <div class="frame"><video src="media/ivy.mp4" poster="media/ivy.jpg" muted loop playsinline preload="none"></video><button class="sound" type="button" aria-label="Səsi aç"></button></div>
+    <figcaption><b>IVY HUB</b><span data-t="c_ivy">Aylıq işləyirəm: marketinq, Meta hədəfləmə və hər ay AI video. Bu, valideynlər üçün «8-ci sinifdən universitetə» videosudur.</span><small data-t="t_ivy">Aylıq müştəri · Meta reklamı · motion</small></figcaption>
+  </figure>
+  <figure class="reel">
+    <div class="frame"><video src="media/kovero.mp4" poster="media/kovero.jpg" muted loop playsinline preload="none"></video><button class="sound" type="button" aria-label="Səsi aç"></button></div>
+    <figcaption><b>Kovero</b><span data-t="c_kov">Öz tətbiqim. Real kadrlardan Reels seriyası: qısa, səsli, subtitrli.</span><small data-t="t_kov">Montaj · tətbiq reklamı</small></figcaption>
+  </figure>
+  <figure class="reel">
+    <div class="frame"><video src="media/kamp.mp4" poster="media/kamp.jpg" muted loop playsinline preload="none"></video><button class="sound" type="button" aria-label="Səsi aç"></button></div>
+    <figcaption><b>Tedora</b><span data-t="c_kamp">Kampda bir gün 13 saniyədə. Telefon kadrlarından ritmli montaj.</span><small data-t="t_kamp">Real kadr · montaj</small></figcaption>
+  </figure>
+  <figure class="reel">
+    <div class="frame"><video src="media/gelinlik.mp4" poster="media/gelinlik.jpg" muted loop playsinline preload="none"></video><button class="sound" type="button" aria-label="Səsi aç"></button></div>
+    <figcaption><b data-t="n_gel">Gəlinlik</b><span data-t="c_gel">Model çəkilişi olmadan AI moda videosu. Paltar bir fotodan canlanır.</span><small data-t="t_gel">AI video · moda</small></figcaption>
+  </figure>
+</div>
+
+<section class="wrap">
+  <h2 data-t="about_h">Öz bizneslərimdə sınamışam</h2>
+  <p class="intro" data-t="about">9 ildir Meta reklamı aparıram, $100K-dan çox büdcə idarə etmişəm. Shopify brendimi illik ~$300K dövriyyəyə çatdırmışam. Tedora Gift hədiyyə biznesini və Tribu Baku kafesini işlətmişəm. İndi Zelunas brendini və Kovero tətbiqini qururam, müştərilərə verdiyim Claude və n8n sistemləri də buradan gəlir.</p>
+  <p class="total" data-t="total">Satış üçün çəkdiyim videolar TikTok-da 62 milyondan çox baxış toplayıb, 12-si 1 milyonu keçib.</p>
+  <ul class="ledger">
+    <li><a href="https://www.tiktok.com/@tedoragift">Tedora Gift</a><span data-t="cat_gift">hədiyyə biznesi, Bakı</span><b>31 mln</b><a class="top" href="https://www.tiktok.com/@tedoragift/video/7228965041838624002"><span data-t="top_l">ən çox baxılan</span> 2,1 mln</a></li>
+    <li><a href="https://www.tiktok.com/@zelunas">Zelunas</a><span data-t="cat_zg">LED çərçivə, qlobal</span><b>21 mln</b><a class="top" href="https://www.tiktok.com/@zelunas/video/7366629157893098794"><span data-t="top_l">ən çox baxılan</span> 16,8 mln</a></li>
+    <li><a href="https://www.tiktok.com/@zelunas.baku">Zelunas Baku</a><span data-t="cat_zb">LED çərçivə, Bakı</span><b>6,7 mln</b><a class="top" href="https://www.tiktok.com/@zelunas.baku/video/7475082590517595399"><span data-t="top_l">ən çox baxılan</span> 1,1 mln</a></li>
+    <li><a href="https://www.tiktok.com/@zelunasgifts">Zelunas Gifts</a><span data-t="cat_zgf">LED çərçivə, qlobal</span><b>3,2 mln</b><a class="top" href="https://www.tiktok.com/@zelunasgifts/video/7611638798799228168"><span data-t="top_l">ən çox baxılan</span> 375 min</a></li>
+  </ul>
+  <p class="src" data-t="src">TikTok-un ictimai rəqəmləri, 17 oktyabr 2026.</p>
+</section>
+
+<section class="wrap">
+  <h2 data-t="svc_h">Nə edirəm</h2>
+  <div class="cols">
+    <div><h3 data-t="s1_h">Analiz və plan</h3><p data-t="s1">Reklam hesabınıza, Instagram-ınıza, rəqiblərinizə və satış prosesinizə baxıram. Nəticədə bir səhifəlik plan çıxır: nə saxlanır, nə dəyişir.</p></div>
+    <div><h3 data-t="s2_h">Meta reklamı</h3><p data-t="s2">Kampaniya quruluşu, Pixel və CAPI, lead forması. Hədəf baxış yox, WhatsApp-a gələn müraciətdir.</p></div>
+    <div><h3 data-t="s3_h">SMM və satışa rəhbərlik</h3><p data-t="s3">SMM-inizə nəyi necə çəkəcəyini, hansı hook ilə başlayacağını öyrədirəm. Satış komandanızın DM və WhatsApp yazışmalarına baxıram, cavab skriptlərini düzəldirəm.</p></div>
+    <div><h3 data-t="s4_h">AI və avtomatlaşdırma</h3><p data-t="s4">Telegram botu hər həftə audit və marketinq ideyası göndərir. SMM üçün şəkil və video köməkçisi qururam. Müraciət cədvələ, şərh yazana isə avtomatik DM gedir.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 data-t="proc_h">İlk 7 gün</h2>
+  <ol class="days">
+    <li><span class="d">1</span><p data-t="d1">Giriş icazələri, brief, satış prosesinə baxış</p></li>
+    <li><span class="d">2</span><p data-t="d2">Pixel, CAPI, lead forması, UTM</p></li>
+    <li><span class="d">3–4</span><p data-t="d3">SMM ilə çəkiliş tapşırığı və kreativlər</p></li>
+    <li><span class="d">5</span><p data-t="d5">Kampaniya quruluşu</p></li>
+    <li><span class="d">6–7</span><p data-t="d6">Reklam canlıdır</p></li>
+  </ol>
+  <p class="after" data-t="after">Sonra sabit ritm: həftədə iki dəfə optimizasiya, bazar ertəsi audit Telegram-a gəlir, ayın sonunda 30 dəqiqəlik zəng.</p>
+</section>
+
+<section class="wrap">
+  <h2 data-t="pk_h">Paketlər</h2>
+  <div class="pk">
+    <article><h3>Start</h3><p class="for" data-t="p1_for">Reklama yeni başlayanlar üçün</p>
+      <ul><li data-t="p1a">Analiz və bir səhifəlik plan</li><li data-t="p1b">Meta reklamı: 1–2 kampaniya</li><li data-t="p1c">SMM-ə aylıq content planı</li><li data-t="p1d">Aylıq hesabat</li></ul></article>
+    <article class="mid"><h3>Growth</h3><p class="for" data-t="p2_for">Müraciət axını olan bizneslər üçün</p>
+      <ul><li data-t="p2a">Start-dakı hər şey</li><li data-t="p2b">Həftəlik audit Telegram-a</li><li data-t="p2c">SMM ilə ayda 2 iş sessiyası</li><li data-t="p2d">DM və WhatsApp cavab skriptləri</li><li data-t="p2e">Müraciət → cədvəl avtomatlaşdırması</li></ul></article>
+    <article><h3>Full</h3><p class="for" data-t="p3_for">Marketinqi sistemə çevirmək istəyənlər üçün</p>
+      <ul><li data-t="p3a">Growth-dakı hər şey</li><li data-t="p3b">SMM üçün AI şəkil və video köməkçisi</li><li data-t="p3c">Marketinq ideyaları botu (Claude)</li><li data-t="p3d">Şərhə avtomatik cavab və DM</li><li data-t="p3e">Satış komandasına təlim, iki həftədə bir zəng</li></ul></article>
+  </div>
+  <p class="note" data-t="pk_note">Qiymət paketə və reklam büdcəsinə görə 15 dəqiqəlik zəngdə dəqiqləşir. Reklam büdcəsini siz öz kartınızla birbaşa Meta-ya ödəyirsiniz, reklam hesabı sizin qalır. Çəkilişi SMM-iniz edir, mən nəyi və necə çəkməyi göstərirəm.</p>
+  <p class="promise" data-t="promise">Kampaniya 7 gün ərzində canlı olmasa, quraşdırma ödənişini qaytarıram.</p>
+</section>
+
+<section class="wrap">
+  <h2 data-t="fit_h">Birlikdə işləməyimiz üçün</h2>
+  <div class="fit">
+    <div><h3 data-t="fit_y">Uyğundur, əgər</h3><ul>
+      <li data-t="fy1">ayda ən azı 300 AZN reklam büdcəniz var</li>
+      <li data-t="fy4">çəkiliş edən SMM və ya əməkdaşınız var</li>
+      <li data-t="fy2">müraciətə 15 dəqiqə ərzində cavab verən adamınız var</li>
+      <li data-t="fy3">qərarı verən şəxslə birbaşa danışırıq</li></ul></div>
+    <div><h3 data-t="fit_n">Uyğun deyil, əgər</h3><ul>
+      <li data-t="fn1">satış sayına zəmanət gözləyirsiniz</li>
+      <li data-t="fn2">yalnız «layk və izləyici» lazımdır</li></ul></div>
+  </div>
+</section>
+
+<section class="wrap contact">
+  <h2 data-t="ct_h">Marketinqinizə pulsuz baxım?</h2>
+  <p class="intro" data-t="ct">Instagram səhifənizi və ya reklam linkinizi göndərin. 1 dəqiqəlik videoda reklamda, SMM-də və yazışmalarda nəyi necə düzəldərdim, göstərəcəyəm.</p>
+  <div class="ctas" style="margin-top:22px">
+    <a class="btn primary js-wa" href="#"><span data-t="cta_wa">WhatsApp-a yazın</span></a>
+    <a class="btn" href="mailto:jafar.alasgarov@gmail.com">jafar.alasgarov@gmail.com</a>
+    <a class="btn" href="https://instagram.com/jafaralasgarov">Instagram</a>
+  </div>
+</section>
+</main>
+
+<footer class="wrap foot"><span data-t="foot">Bakı. Uzaqdan da işləyirəm.</span></footer>
+
+<script>
+// Kontakt: WhatsApp nömrəsi E.164 rəqəmləri (təsdiqdən sonra doldurulur)
+const WA = "994519040497"; // +994 51 904 04 97 (Jafar 17.10)
+const EN = {
+  draft:"Draft: confirm or fix everything inside the red dashed outline.",
+  name:"Jafar Alasgarov",
+  h1:"Ads that bring leads, not just views.",
+  lede:"I analyse your marketing, build your ads, coach your social media manager on what to shoot and fix your sales messaging. Repetitive work gets automated with Claude and n8n, so your team can keep going on its own.",
+  cta_wa:"Message on WhatsApp", cta_mail:"Send an email",
+  c_ivy:"A monthly client: marketing, Meta targeting and an AI video every month. This one is “From 8th grade to university” for parents.",
+  t_ivy:"Monthly client · Meta ads · motion",
+  c_kov:"My own app. A Reels series from real footage: short, voiced, subtitled.",
+  t_kov:"Editing · app ads",
+  c_kamp:"A day at camp in 13 seconds. Rhythmic edit from phone footage.",
+  t_kamp:"Real footage · editing",
+  n_gel:"Bridal", c_gel:"An AI fashion video with no model shoot. The dress comes alive from one photo.", t_gel:"AI video · fashion",
+  about_h:"Tested on my own businesses",
+  about:"I've run Meta ads for 9 years and managed over $100K in ad spend. I grew my Shopify brand to ~$300K a year in revenue. I ran Tedora Gift, a gift business, and the Tribu Baku cafe. Now I'm building the Zelunas brand and the Kovero app, and the Claude and n8n systems I set up for clients come from that work.",
+  total:"The videos I made to sell have passed 62 million views on TikTok, and 12 of them went over 1 million.",
+  cat_gift:"gift business, Baku", cat_zg:"LED frames, global", cat_zb:"LED frames, Baku", cat_zgf:"LED frames, global",
+  top_l:"most viewed", src:"Public TikTok numbers, 17 October 2026.",
+  c_ief:"A regular client, working remotely. A no-shoot ad film for Baku race week: branded car, driver, city.",
+  t_ief:"AI video · B2B · regular client",
+  svc_h:"What I do",
+  s1_h:"Analysis and plan", s1:"I review your ad account, Instagram, competitors and sales process. You get a one-page plan: what stays and what changes.",
+  s2_h:"Meta ads", s2:"Campaign structure, Pixel and CAPI, lead forms. The goal is leads in your WhatsApp, not views.",
+  s3_h:"Coaching for social and sales", s3:"I show your social media manager what to shoot and which hook to open with. I review your team's DMs and WhatsApp chats and fix the reply scripts.",
+  s4_h:"AI and automation", s4:"A Telegram bot sends a weekly audit and marketing ideas. Your social media manager gets an AI helper for images and video. Leads land in a sheet, and commenters get an automatic DM.",
+  proc_h:"The first 7 days",
+  d1:"Access, brief, a look at your sales process", d2:"Pixel, CAPI, lead form, UTM", d3:"Shot list for your team and creatives", d5:"Campaign setup", d6:"Ads are live",
+  after:"Then a steady rhythm: optimisation twice a week, a Monday audit in Telegram, a 30-minute call at month end.",
+  pk_h:"Packages",
+  p1_for:"For brands starting with ads", p1a:"Analysis and a one-page plan", p1b:"Meta ads: 1–2 campaigns", p1c:"Monthly content plan for your team", p1d:"Monthly report",
+  p2_for:"For businesses with a steady lead flow", p2a:"Everything in Start", p2b:"Weekly audit in Telegram", p2c:"2 working sessions a month with your social media manager", p2d:"DM and WhatsApp reply scripts", p2e:"Lead → sheet automation",
+  p3_for:"For teams turning marketing into a system", p3a:"Everything in Growth", p3b:"AI image and video helper for your team", p3c:"Marketing ideas bot (Claude)", p3d:"Automatic comment replies and DMs", p3e:"Sales team training, a call every two weeks",
+  pk_note:"Pricing depends on the package and ad budget and is set on a 15-minute call. You pay Meta directly with your own card, and the ad account stays yours. Your team does the filming, and I show them what to shoot and how.",
+  promise:"If the campaign isn't live within 7 days, I refund the setup fee.",
+  fit_h:"When we're a good fit",
+  fit_y:"A good fit if", fy1:"you have at least $200 a month for ads", fy4:"you have someone who films (a social media manager or a team member)", fy2:"someone answers leads within 15 minutes", fy3:"we talk directly with the decision maker",
+  fit_n:"Not a fit if", fn1:"you expect a guaranteed number of sales", fn2:"you only want likes and followers",
+  ct_h:"Want a free look at your marketing?",
+  ct:"Send your Instagram page or an ad link. I'll record a 1-minute video showing what I'd fix in your ads, content and chats, and how.",
+  foot:"Based in Baku. Working remotely."
+};
+const AZ = {};
+document.querySelectorAll("[data-t]").forEach(el => { AZ[el.dataset.t] = el.textContent; });
+
+// Sayt azərbaycancadır (Jafar 17.10: əvvəl AZ şirkətləri). EN mətn xarici kanal üçün saxlanır,
+// yalnız ?lang=en linki ilə açılır; səhifədə dil düyməsi yoxdur.
+function setLang(l){
+  const d = l === "en" ? EN : AZ;
+  document.documentElement.lang = l;
+  document.querySelectorAll("[data-t]").forEach(el => { const v = d[el.dataset.t]; if (v) el.textContent = v; });
+}
+if (new URLSearchParams(location.search).get("lang") === "en") setLang("en");
+
+// WhatsApp linki
+document.querySelectorAll(".js-wa").forEach(a => {
+  if (WA) a.href = "https://wa.me/" + WA; else a.removeAttribute("href");
+});
+
+// Reel-lər: görünəndə səssiz oynayır; düymə ilə səs açılır (bir anda yalnız biri)
+const ICON_OFF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m22 9-6 6m0-6 6 6"/></svg>';
+const ICON_ON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>';
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const vids = [...document.querySelectorAll(".reel video")];
+const btns = [...document.querySelectorAll(".reel .sound")];
+btns.forEach(b => b.innerHTML = ICON_OFF);
+function muteAll(except){
+  vids.forEach((v, i) => { if (v !== except) { v.muted = true; btns[i].innerHTML = ICON_OFF; btns[i].setAttribute("aria-label", "Səsi aç"); } });
+}
+btns.forEach((b, i) => b.addEventListener("click", () => {
+  const v = vids[i];
+  const on = v.muted;
+  muteAll(v);
+  v.muted = !on;
+  b.innerHTML = on ? ICON_ON : ICON_OFF;
+  b.setAttribute("aria-label", on ? "Səsi bağla" : "Səsi aç");
+  if (on) { v.currentTime = 0; v.play().catch(() => {}); }
+}));
+if (!reduce && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting && e.intersectionRatio > .6) { v.preload = "auto"; v.play().catch(() => {}); }
+    else v.pause();
+  }), { threshold: [0, .6, 1] });
+  vids.forEach(v => io.observe(v));
+} else {
+  vids.forEach(v => { v.controls = true; });
+  btns.forEach(b => { b.hidden = true; }); // brauzerin öz səs düyməsi var
+}
+</script>
+</body>
+</html>

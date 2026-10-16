@@ -1,0 +1,173 @@
+{
+ "source": "TikTok ictimai profil, tools/tiktok-stats.mjs + Playwright MCP",
+ "date": "2026-10-17",
+ "accounts": [
+  {
+   "handle": "@tedoragift",
+   "at": "2026-10-16T22:28:12.694Z",
+   "stats": {
+    "followers": 32100,
+    "likes": 911800,
+    "videos": 644
+   },
+   "read": 641,
+   "total": 31153574,
+   "median": 3414,
+   "over1M": 10,
+   "over100K": 42,
+   "top": [
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7228965041838624002",
+     "views": 2100000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7205287076160392449",
+     "views": 1600000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7056754348281318658",
+     "views": 1500000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7217834085572496658",
+     "views": 1400000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7035604042529131777",
+     "views": 1400000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7206708270596164866",
+     "views": 1300000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7195643881344470273",
+     "views": 1300000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7301633960856046850",
+     "views": 1200000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7610155607827565844",
+     "views": 1000000
+    },
+    {
+     "url": "https://www.tiktok.com/@tedoragift/video/7128851179555048706",
+     "views": 1000000
+    }
+   ]
+  },
+  {
+   "handle": "@zelunasgifts",
+   "at": "2026-10-16T22:24:34.405Z",
+   "stats": {
+    "followers": 5091,
+    "likes": 72900,
+    "videos": 97
+   },
+   "read": 96,
+   "total": 3299293,
+   "median": 4207,
+   "over1M": 0,
+   "over100K": 9,
+   "top": [
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7611638798799228168",
+     "views": 375700
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7596395253020544263",
+     "views": 354800
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7601243810852556039",
+     "views": 343100
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7674496705974258962",
+     "views": 342700
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7603145838440795413",
+     "views": 290500
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7653524365648088328",
+     "views": 283100
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7653521402200427783",
+     "views": 184100
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7612818488209460488",
+     "views": 134400
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7596028215538339090",
+     "views": 101400
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunasgifts/video/7645304050703076616",
+     "views": 99500
+    }
+   ]
+  },
+  {
+   "handle": "@zelunas",
+   "at": "2026-10-17",
+   "stats": {
+    "followers": 5861,
+    "likes": 1800000,
+    "videos": 358
+   },
+   "read": 347,
+   "total": 21086261,
+   "over1M": 1,
+   "over100K": 10,
+   "top": [
+    {
+     "url": "https://www.tiktok.com/@zelunas/video/7366629157893098794",
+     "views": 16800000
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunas/video/7369138119746112810",
+     "views": 743000
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunas/video/7394229178784075038",
+     "views": 507000
+    }
+   ]
+  },
+  {
+   "handle": "@zelunas.baku",
+   "at": "2026-10-17",
+   "stats": {
+    "followers": 10300,
+    "likes": 151000,
+    "videos": 676
+   },
+   "read": 673,
+   "total": 6764209,
+   "over1M": 1,
+   "over100K": 16,
+   "top": [
+    {
+     "url": "https://www.tiktok.com/@zelunas.baku/video/7475082590517595399",
+     "views": 1100000
+    },
+    {
+     "url": "https://www.tiktok.com/@zelunas.baku/video/7458564137170373906",
+     "views": 608400
+    }
+   ]
+  }
+ ],
+ "sum": {
+  "total": 62303337,
+  "over1M": 12,
+  "over100K": 77
+ }
+}
